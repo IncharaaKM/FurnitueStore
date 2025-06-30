@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Home Furnishings</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf8f3; /* Light, warm background */
+        }
+        /* Custom button styling for a cute, attractive look */
+        .cute-button {
+            background-image: linear-gradient(to right, #ffb6c1, #ffd1dc); /* Soft pink gradient */
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4); /* Soft pink shadow */
+        }
+        .cute-button:hover {
+            transform: translateY(-3px); /* Subtle lift effect */
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.6); /* Enhanced shadow on hover */
+            background-image: linear-gradient(to right, #ffd1dc, #ffb6c1); /* Reverse gradient on hover */
+        }
+        /* Styling for product detail button */
+        .product-detail-button {
+            background-image: linear-gradient(to right, #b7e0f2, #d1f0fa); /* Soft blue gradient */
+            color: #4a5568; /* Darker text for contrast */
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 8px rgba(183, 224, 242, 0.4); /* Soft blue shadow */
+        }
+        .product-detail-button:hover {
+            transform: translateY(-2px);
+            box_shadow: 0 4px 12px rgba(183, 224, 242, 0.6);
+            background-image: linear-gradient(to right, #d1f0fa, #b7e0f2);
+        }
+        /* Styling for Add to Cart button */
+        .add-to-cart-button {
+            background-image: linear-gradient(to right, #c2f9c2, #e0ffe0); /* Soft green gradient */
+            color: #3f683f; /* Darker green text */
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(194, 249, 194, 0.4);
+        }
+        .add-to-cart-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(194, 249, 194, 0.6);
+            background-image: linear-gradient(to right, #e0ffe0, #c2f9c2);
+        }
+        /* Styling for Begin Checkout button */
+        .begin-checkout-button {
+            background-image: linear-gradient(to right, #a0d9ff, #c0efff); /* Soft light blue gradient */
+            color: #2a6587; /* Darker blue text */
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(160, 217, 255, 0.4);
+        }
+        .begin-checkout-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(160, 217, 255, 0.6);
+            background-image: linear-gradient(to right, #c0efff, #a0d9ff);
+        }
+        /* Styling for Thank You button (similar to cute-button but maybe slightly different hue if desired) */
+        .thank-you-button {
+            background-image: linear-gradient(to right, #ffc72c, #ffeb82); /* Golden-yellow gradient */
+            color: #8c5b00; /* Darker gold text */
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 199, 44, 0.4);
+        }
+        .thank-you-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255, 199, 44, 0.6);
+            background-image: linear-gradient(to right, #ffeb82, #ffc72c);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Main Content Wrapper -->
+    <div id="main-content-wrapper">
+
+        <!-- Landing Page Section -->
+        <div id="landing-page">
+            <!-- Header/Navigation -->
+            <header class="p-4 bg-white shadow-sm sticky top-0 z-10">
+                <nav class="container mx-auto flex justify-between items-center">
+                    <div class="text-2xl font-bold text-[#f78096]">Dreamy Home</div>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-gray-600 hover:text-[#f78096] transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-[#f78096] transition-colors">Shop</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-[#f78096] transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-[#f78096] transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Hero Section -->
+            <section class="relative bg-[#fcf8f3] py-16 md:py-24 overflow-hidden">
+                <div class="container mx-auto flex flex-col md:flex-row items-center justify-center px-4">
+                    <!-- Text Content -->
+                    <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 px-4">
+                        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-[#f78096] mb-6 drop-shadow-lg">
+                            Cuddle Up <br> Your Home!
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg mx-auto md:mx-0">
+                            Discover adorable and charming furniture pieces that bring joy and warmth to every corner of your home. Perfect for creating a cozy, inviting space.
+                        </p>
+                        <button onclick="showProductsPage()" class="cute-button inline-block cursor-pointer">
+                            Explore Our Dreamy Products
+                        </button>
+                    </div>
+
+                    <!-- Image Carousel/Display (Placeholder images used) -->
+                    <div class="md:w-1/2 relative flex justify-center items-center">
+                        <div class="relative w-full max-w-md h-80 md:h-96 bg-white rounded-3xl shadow-2xl overflow-hidden transform rotate-3 scale-105">
+                            <img src="https://placehold.co/600x400/ffe4e1/6a0dad?text=Cute+Sofa" alt="Cute Sofa" class="absolute inset-0 w-full h-full object-cover rounded-3xl" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0BBE4/957DAD?text=Adorable+Furniture+1';">
+                        </div>
+                        <div class="absolute w-full max-w-sm h-72 md:h-80 bg-white rounded-3xl shadow-xl overflow-hidden -left-10 top-10 transform -rotate-6 scale-95 hidden sm:block">
+                             <img src="https://placehold.co/500x350/ffdaed/000000?text=Comfy+Armchair" alt="Comfy Armchair" class="absolute inset-0 w-full h-full object-cover rounded-3xl" onerror="this.onerror=null;this.src='https://placehold.co/500x350/F8D8E0/C5B0BB?text=Adorable+Furniture+2';">
+                        </div>
+                        <div class="absolute w-full max-w-xs h-60 md:h-72 bg-white rounded-3xl shadow-lg overflow-hidden -right-10 bottom-10 transform rotate-10 scale-90 hidden sm:block">
+                             <img src="https://placehold.co/400x300/e0f0ff/000000?text=Charming+Decor" alt="Charming Decor" class="absolute inset-0 w-full h-full object-cover rounded-3xl" onerror="this.onerror=null;this.src='https://placehold.co/400x300/BCD9E7/7AA9C2?text=Adorable+Furniture+3';">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section - Details about the furniture -->
+            <section class="py-16 md:py-20 bg-white" id="about">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-4xl font-bold text-[#f78096] mb-12">Crafted with Love & Delight</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        <!-- Feature 1 -->
+                        <div class="bg-[#fff0f5] p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                            <div class="text-5xl mb-4 text-[#ff8fab]">🎀</div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">Irresistibly Cute Designs</h3>
+                            <p class="text-gray-600">
+                                Our collection features unique designs that are both charming and functional, adding a touch of whimsical beauty to any room.
+                            </p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="bg-[#f0f8ff] p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                            <div class="text-5xl mb-4 text-[#87ceeb]">☁️</div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">Superior Comfort & Quality</h3>
+                            <p class="text-gray-600">
+                                Made with premium materials, each piece promises exceptional comfort and durability, ensuring long-lasting enjoyment.
+                            </p>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="bg-[#f5fff0] p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                            <div class="text-5xl mb-4 text-[#90ee90]">🌸</div>
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-800">Hand-Picked for Your Home</h3>
+                            <p class="text-gray-600">
+                                Every item is carefully selected to ensure it meets our high standards of aesthetic appeal and craftsmanship.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action Section -->
+            <section class="py-16 md:py-20 bg-[#fcf8f3] text-center">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#f78096] mb-8">Ready to Adorn Your Space?</h2>
+                    <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
+                        Dive into our enchanting collection and find the perfect pieces that speak to your heart and transform your house into a dreamy haven.
+                    </p>
+                    <button onclick="showProductsPage()" class="cute-button inline-block cursor-pointer">
+                        Start Your Dreamy Journey
+                    </button>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-[#fad3e7] py-8 text-center text-gray-700">
+                <div class="container mx-auto px-4">
+                    <p>&copy; 2025 Dreamy Home Furnishings. All rights reserved.</p>
+                    <p class="mt-2">Made with 💖 for a beautiful home.</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Products Page Section (Initially hidden) -->
+        <div id="products-page" class="hidden">
+            <header class="p-4 bg-white shadow-sm">
+                <nav class="container mx-auto flex justify-between items-center">
+                    <div class="text-2xl font-bold text-[#f78096]">Dreamy Home Products</div>
+                    <button onclick="showLandingPage()" class="cute-button text-sm px-4 py-2 cursor-pointer">
+                        Back to Home
+                    </button>
+                </nav>
+            </header>
+
+            <section class="py-16 md:py-20 bg-[#fcf8f3] text-center">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-4xl font-bold text-[#f78096] mb-12">Our Adorable Collection</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Product Card 1 -->
+                        <div class="bg-white p-6 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/400x300/ffdddd/555555?text=Cloud+Sofa" alt="Cloud Sofa" class="w-full h-48 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x300/DDEEFF/555555?text=Product+1';">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">Cloud Nine Sofa</h3>
+                            <p class="text-gray-600 mb-4">Drift into comfort with our fluffy cloud-like sofa.</p>
+                            <button onclick="showProductDetails('cloud-sofa')" class="product-detail-button cursor-pointer">
+                                Product Details
+                            </button>
+                        </div>
+                        <!-- Product Card 2 -->
+                        <div class="bg-white p-6 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/400x300/e0ffff/555555?text=Starry+Lamp" alt="Starry Lamp" class="w-full h-48 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFEECC/555555?text=Product+2';">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">Twinkle Star Lamp</h3>
+                            <p class="text-gray-600 mb-4">Illuminate your dreams with this enchanting star-shaped lamp.</p>
+                            <button onclick="showProductDetails('starry-lamp')" class="product-detail-button cursor-pointer">
+                                Product Details
+                            </button>
+                        </div>
+                        <!-- Product Card 3 -->
+                        <div class="bg-white p-6 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/400x300/ffe0f0/555555?text=Flower+Chair" alt="Flower Chair" class="w-full h-48 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFCCCC/555555?text=Product+3';">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">Blossom Accent Chair</h3>
+                            <p class="text-gray-600 mb-4">A floral delight, perfect for adding a pop of charm.</p>
+                            <button onclick="showProductDetails('flower-chair')" class="product-detail-button cursor-pointer">
+                                Product Details
+                            </button>
+                        </div>
+                        <!-- Product Card 4 -->
+                        <div class="bg-white p-6 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/400x300/e0f0ff/555555?text=Rainbow+Rug" alt="Rainbow Rug" class="w-full h-48 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x300/CCFFCC/555555?text=Product+4';">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">Rainbow Dreams Rug</h3>
+                            <p class="text-gray-600 mb-4">Brighten your floor with every color of the rainbow.</p>
+                            <button onclick="showProductDetails('rainbow-rug')" class="product-detail-button cursor-pointer">
+                                Product Details
+                            </button>
+                        </div>
+                        <!-- Product Card 5 -->
+                        <div class="bg-white p-6 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/400x300/f0e0ff/555555?text=Unicorn+Bookshelf" alt="Unicorn Bookshelf" class="w-full h-48 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFFFCC/555555?text=Product+5';">
+                            <h3 class="text-2xl font-semibold mb-2 text-gray-800">Whimsical Unicorn Bookshelf</h3>
+                            <p class="text-gray-600 mb-4">Store your tales in a magical and charming way.</p>
+                            <button onclick="showProductDetails('unicorn-bookshelf')" class="product-detail-button cursor-pointer">
+                                Product Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-[#fad3e7] py-8 text-center text-gray-700">
+                <div class="container mx-auto px-4">
+                    <p>&copy; 2025 Dreamy Home Furnishings. All rights reserved.</p>
+                    <p class="mt-2">Made with 💖 for a beautiful home.</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Product Details Page Section (Initially hidden) -->
+        <div id="product-detail-page" class="hidden">
+            <header class="p-4 bg-white shadow-sm">
+                <nav class="container mx-auto flex justify-between items-center">
+                    <div class="text-2xl font-bold text-[#f78096]" id="detail-page-product-name-header">Product Details</div>
+                    <button onclick="showAllProducts()" class="cute-button text-sm px-4 py-2 cursor-pointer">
+                        Back to Products
+                    </button>
+                </nav>
+            </header>
+
+            <section class="py-16 md:py-20 bg-[#fcf8f3] text-center">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-12">
+                    <!-- Product Image -->
+                    <div class="md:w-1/2 flex justify-center">
+                        <img id="product-detail-image" src="https://placehold.co/600x400/cccccc/ffffff?text=Product+Image" alt="Product Detail" class="w-full max-w-lg h-auto rounded-3xl shadow-xl">
+                    </div>
+                    <!-- Product Info -->
+                    <div class="md:w-1/2 text-left px-4">
+                        <h2 class="text-4xl font-bold text-[#f78096] mb-4" id="product-detail-name">Product Name</h2>
+                        <p class="text-2xl font-semibold text-gray-800 mb-6" id="product-detail-price">$0.00</p>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-8" id="product-detail-description">
+                            Detailed description of the product will appear here, explaining its features, materials, and why it's a perfect addition to a dreamy home.
+                        </p>
+                        <button onclick="showCheckoutPage()" class="add-to-cart-button inline-block cursor-pointer">
+                            Add to Cart 🛒
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-[#fad3e7] py-8 text-center text-gray-700">
+                <div class="container mx-auto px-4">
+                    <p>&copy; 2025 Dreamy Home Furnishings. All rights reserved.</p>
+                    <p class="mt-2">Made with 💖 for a beautiful home.</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Checkout Page Section (Initially hidden) -->
+        <div id="checkout-page" class="hidden">
+            <header class="p-4 bg-white shadow-sm">
+                <nav class="container mx-auto flex justify-between items-center">
+                    <div class="text-2xl font-bold text-[#f78096]">Your Dreamy Cart</div>
+                    <button onclick="showProductDetails(lastViewedProductId)" class="cute-button text-sm px-4 py-2 cursor-pointer">
+                        Back to Product
+                    </button>
+                </nav>
+            </header>
+
+            <section class="py-16 md:py-20 bg-[#fcf8f3] text-center">
+                <div class="container mx-auto px-4 max-w-2xl bg-white p-8 rounded-3xl shadow-lg">
+                    <h2 class="text-4xl font-bold text-[#f78096] mb-8">Checkout Details</h2>
+
+                    <div class="text-left mb-8">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="text-lg font-semibold text-gray-700">Item:</span>
+                            <span class="text-lg text-gray-800" id="checkout-item-name"></span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="text-lg font-semibold text-gray-700">Price:</span>
+                            <span class="text-lg text-gray-800" id="checkout-item-price"></span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="text-lg font-semibold text-gray-700">Quantity:</span>
+                            <span class="text-lg text-gray-800">1</span> <!-- For now, hardcoded quantity -->
+                        </div>
+                        <div class="flex justify-between items-center py-3 font-bold text-xl text-gray-900">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal"></span>
+                        </div>
+                    </div>
+
+                    <button onclick="showThankYouPage()" class="begin-checkout-button inline-block cursor-pointer">
+                        Begin Checkout ✨
+                    </button>
+                </div>
+            </section>
+
+            <footer class="bg-[#fad3e7] py-8 text-center text-gray-700">
+                <div class="container mx-auto px-4">
+                    <p>&copy; 2025 Dreamy Home Furnishings. All rights reserved.</p>
+                    <p class="mt-2">Made with 💖 for a beautiful home.</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Thank You Page Section (Initially hidden) -->
+        <div id="thank-you-page" class="hidden">
+            <header class="p-4 bg-white shadow-sm">
+                <nav class="container mx-auto flex justify-between items-center">
+                    <div class="text-2xl font-bold text-[#f78096]">Dreamy Home</div>
+                    <button onclick="showLandingPage()" class="cute-button text-sm px-4 py-2 cursor-pointer">
+                        Back to Home
+                    </button>
+                </nav>
+            </header>
+
+            <section class="py-24 md:py-32 bg-[#fcf8f3] text-center flex flex-col items-center justify-center min-h-[calc(100vh-160px)]">
+                <div class="container mx-auto px-4 max-w-2xl bg-white p-10 rounded-3xl shadow-lg">
+                    <div class="text-7xl mb-8">💖✨</div>
+                    <h2 class="text-5xl font-extrabold text-[#f78096] mb-6">Thank You for Your Purchase!</h2>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                        Your order is being processed with love and care. We're so excited for your new dreamy furniture to arrive!
+                        You'll receive a confirmation email shortly with all the details.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-10">
+                        We hope you adore your new pieces and they bring endless joy to your home.
+                    </p>
+                    <button onclick="showLandingPage()" class="thank-you-button inline-block cursor-pointer">
+                        Continue Shopping
+                    </button>
+                </div>
+            </section>
+
+            <footer class="bg-[#fad3e7] py-8 text-center text-gray-700">
+                <div class="container mx-auto px-4">
+                    <p>&copy; 2025 Dreamy Home Furnishings. All rights reserved.</p>
+                    <p class="mt-2">Made with 💖 for a beautiful home.</p>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script>
+        // Define product data
+        const products = [
+            {
+                id: 'cloud-sofa',
+                name: 'Cloud Nine Sofa',
+                image: 'https://placehold.co/600x400/ffdddd/555555?text=Cloud+Sofa+Detail',
+                description: 'Drift into comfort with our fluffy, cloud-like sofa. Upholstered in ultra-soft fabric, it features deep seating and plush cushions, perfect for cozying up with a book or enjoying movie nights. Its whimsical design brings a dreamy aesthetic to any living space, promising ultimate relaxation and a touch of enchanting charm.',
+                price: '1299.00' // Changed to number for calculation
+            },
+            {
+                id: 'starry-lamp',
+                name: 'Twinkle Star Lamp',
+                image: 'https://placehold.co/600x400/e0ffff/555555?text=Starry+Lamp+Detail',
+                description: 'Illuminate your dreams with this enchanting star-shaped lamp. Crafted with a delicate metallic frame and soft LED lights, it casts a gentle, warm glow, creating a magical ambiance. Ideal for bedrooms, nurseries, or any space needing a touch of celestial wonder and subtle illumination.',
+                price: '89.99'
+            },
+            {
+                id: 'flower-chair',
+                name: 'Blossom Accent Chair',
+                image: 'https://placehold.co/600x400/ffe0f0/555555?text=Flower+Chair+Detail',
+                description: 'A floral delight, perfect for adding a pop of charm and comfort to your reading nook or living room. Its unique blossom shape and velvet upholstery provide a luxurious feel, while the sturdy base ensures stability. This chair is a statement piece that blends whimsical design with practical elegance.',
+                price: '349.00'
+            },
+            {
+                id: 'rainbow-rug',
+                name: 'Rainbow Dreams Rug',
+                image: 'https://placehold.co/600x400/e0f0ff/555555?text=Rainbow+Rug+Detail',
+                description: 'Brighten your floor with every color of the rainbow. This soft, vibrant rug is made from durable, child-friendly fibers, perfect for playrooms, nurseries, or adding a cheerful splash to any space. Its plush texture is a delight underfoot, bringing joy and warmth to your home.',
+                price: '149.50'
+            },
+            {
+                id: 'unicorn-bookshelf',
+                name: 'Whimsical Unicorn Bookshelf',
+                image: 'https://placehold.co/600x400/f0e0ff/555555?text=Unicorn+Bookshelf+Detail',
+                description: 'Store your tales in a magical and charming way with this enchanting unicorn-themed bookshelf. Featuring multiple shelves and a sturdy, whimsical design, it is perfect for organizing books, toys, and treasured keepsakes. It adds a touch of fantasy and organization to any child\'s room or imaginative space.',
+                price: '199.00'
+            }
+        ];
+
+        let lastViewedProductId = ''; // To store the ID of the product whose details were last viewed
+
+        // Function to show the products page and hide other pages
+        function showProductsPage() {
+            document.getElementById('landing-page').classList.add('hidden');
+            document.getElementById('product-detail-page').classList.add('hidden');
+            document.getElementById('checkout-page').classList.add('hidden');
+            document.getElementById('thank-you-page').classList.add('hidden'); // Hide thank you page
+            document.getElementById('products-page').classList.remove('hidden');
+            window.scrollTo(0, 0); // Scroll to top of the new page
+        }
+
+        // Function to show the landing page and hide other pages
+        function showLandingPage() {
+            document.getElementById('products-page').classList.add('hidden');
+            document.getElementById('product-detail-page').classList.add('hidden');
+            document.getElementById('checkout-page').classList.add('hidden');
+            document.getElementById('thank-you-page').classList.add('hidden'); // Hide thank you page
+            document.getElementById('landing-page').classList.remove('hidden');
+            window.scrollTo(0, 0); // Scroll to top of the home page
+        }
+
+        // Function to show a specific product's details page
+        function showProductDetails(productId) {
+            const product = products.find(p => p.id === productId);
+
+            if (product) {
+                lastViewedProductId = productId; // Store the current product ID
+                // Populate the product details page
+                document.getElementById('detail-page-product-name-header').textContent = product.name;
+                document.getElementById('product-detail-image').src = product.image;
+                document.getElementById('product-detail-image').alt = product.name;
+                document.getElementById('product-detail-name').textContent = product.name;
+                document.getElementById('product-detail-price').textContent = `$${parseFloat(product.price).toFixed(2)}`; // Format price
+                document.getElementById('product-detail-description').textContent = product.description;
+
+                // Hide other pages and show product detail page
+                document.getElementById('products-page').classList.add('hidden');
+                document.getElementById('landing-page').classList.add('hidden');
+                document.getElementById('checkout-page').classList.add('hidden');
+                document.getElementById('thank-you-page').classList.add('hidden'); // Hide thank you page
+                document.getElementById('product-detail-page').classList.remove('hidden');
+                window.scrollTo(0, 0); // Scroll to top of the detail page
+            } else {
+                console.error("Product not found:", productId);
+                showProductsPage(); // Fallback to product list
+            }
+        }
+
+        // Function to go back from product details to all products
+        function showAllProducts() {
+            document.getElementById('product-detail-page').classList.add('hidden');
+            document.getElementById('checkout-page').classList.add('hidden');
+            document.getElementById('thank-you-page').classList.add('hidden'); // Ensure thank you page is hidden
+            document.getElementById('products-page').classList.remove('hidden');
+            window.scrollTo(0, 0); // Scroll to top of the products page
+        }
+
+        // Function to show the checkout page
+        function showCheckoutPage() {
+            // Get the product that was last viewed to populate checkout details
+            const product = products.find(p => p.id === lastViewedProductId);
+
+            if (product) {
+                document.getElementById('checkout-item-name').textContent = product.name;
+                document.getElementById('checkout-item-price').textContent = `$${parseFloat(product.price).toFixed(2)}`;
+                document.getElementById('checkout-subtotal').textContent = `$${parseFloat(product.price).toFixed(2)}`; // For now, subtotal is just item price
+
+                // Hide other pages and show checkout page
+                document.getElementById('landing-page').classList.add('hidden');
+                document.getElementById('products-page').classList.add('hidden');
+                document.getElementById('product-detail-page').classList.add('hidden');
+                document.getElementById('thank-you-page').classList.add('hidden'); // Hide thank you page
+                document.getElementById('checkout-page').classList.remove('hidden');
+                window.scrollTo(0, 0); // Scroll to top of the checkout page
+            } else {
+                console.error("No product selected for checkout.");
+                showProductsPage(); // Fallback to product list if no product is in context
+            }
+        }
+
+        // Function to show the thank you page
+        function showThankYouPage() {
+            document.getElementById('landing-page').classList.add('hidden');
+            document.getElementById('products-page').classList.add('hidden');
+            document.getElementById('product-detail-page').classList.add('hidden');
+            document.getElementById('checkout-page').classList.add('hidden');
+            document.getElementById('thank-you-page').classList.remove('hidden');
+            window.scrollTo(0, 0); // Scroll to top of the thank you page
+        }
+    </script>
+
+</body>
+</html>
