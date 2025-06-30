@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Home Furnishings</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf8f3; /* Light, warm background */
+        }
+        /* Custom button styling for a cute, attractive look */
+        .cute-button {
+            background-image: linear-gradient(to right, #ffb6c1, #ffd1dc); /* Soft pink gradient */
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4); /* Soft pink shadow */
+        }
+        .cute-button:hover {
+            transform: translateY(-3px); /* Subtle lift effect */
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.6); /* Enhanced shadow on hover */
+            background-image: linear-gradient(to right, #ffd1dc, #ffb6c1); /* Reverse gradient on hover */
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header/Navigation (Optional, but good practice) -->
+    <header class="p-4 bg-white shadow-sm sticky top-0 z-10">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-[#f78096]">Dreamy Home</div>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="text-gray-600 hover:text-[#f78096] transition-colors">Home</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-[#f78096] transition-colors">Shop</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-[#f78096] transition-colors">About Us</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-[#f78096] transition-colors">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-[#fcf8f3] py-16 md:py-24 overflow-hidden">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center px-4">
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 px-4">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-[#f78096] mb-6 drop-shadow-lg">
+                    Cuddle Up <br> Your Home!
+                </h1>
+                <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg mx-auto md:mx-0">
+                    Discover adorable and charming furniture pieces that bring joy and warmth to every corner of your home. Perfect for creating a cozy, inviting space.
+                </p>
+                <a href="#products" class="cute-button inline-block">
+                    Explore Our Dreamy Products
+                </a>
+            </div>
+
+            <!-- Image Carousel/Display (Placeholder images used) -->
+            <div class="md:w-1/2 relative flex justify-center items-center">
+                <div class="relative w-full max-w-md h-80 md:h-96 bg-white rounded-3xl shadow-2xl overflow-hidden transform rotate-3 scale-105">
+                    <img src="https://placehold.co/600x400/ffe4e1/6a0dad?text=Cute+Sofa" alt="Cute Sofa" class="absolute inset-0 w-full h-full object-cover rounded-3xl" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0BBE4/957DAD?text=Adorable+Furniture+1';">
+                </div>
+                <div class="absolute w-full max-w-sm h-72 md:h-80 bg-white rounded-3xl shadow-xl overflow-hidden -left-10 top-10 transform -rotate-6 scale-95 hidden sm:block">
+                     <img src="https://placehold.co/500x350/ffdaed/000000?text=Comfy+Armchair" alt="Comfy Armchair" class="absolute inset-0 w-full h-full object-cover rounded-3xl" onerror="this.onerror=null;this.src='https://placehold.co/500x350/F8D8E0/C5B0BB?text=Adorable+Furniture+2';">
+                </div>
+                <div class="absolute w-full max-w-xs h-60 md:h-72 bg-white rounded-3xl shadow-lg overflow-hidden -right-10 bottom-10 transform rotate-10 scale-90 hidden sm:block">
+                     <img src="https://placehold.co/400x300/e0f0ff/000000?text=Charming+Decor" alt="Charming Decor" class="absolute inset-0 w-full h-full object-cover rounded-3xl" onerror="this.onerror=null;this.src='https://placehold.co/400x300/BCD9E7/7AA9C2?text=Adorable+Furniture+3';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Details about the furniture -->
+    <section class="py-16 md:py-20 bg-white" id="about">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-[#f78096] mb-12">Crafted with Love & Delight</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-[#fff0f5] p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4 text-[#ff8fab]">🎀</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Irresistibly Cute Designs</h3>
+                    <p class="text-gray-600">
+                        Our collection features unique designs that are both charming and functional, adding a touch of whimsical beauty to any room.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-[#f0f8ff] p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4 text-[#87ceeb]">☁️</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Superior Comfort & Quality</h3>
+                    <p class="text-gray-600">
+                        Made with premium materials, each piece promises exceptional comfort and durability, ensuring long-lasting enjoyment.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-[#f5fff0] p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4 text-[#90ee90]">🌸</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Hand-Picked for Your Home</h3>
+                    <p class="text-gray-600">
+                        Every item is carefully selected to ensure it meets our high standards of aesthetic appeal and craftsmanship.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 md:py-20 bg-[#fcf8f3] text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#f78096] mb-8">Ready to Adorn Your Space?</h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
+                Dive into our enchanting collection and find the perfect pieces that speak to your heart and transform your house into a dreamy haven.
+            </p>
+            <a href="#products" class="cute-button inline-block">
+                Start Your Dreamy Journey
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#fad3e7] py-8 text-center text-gray-700">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Dreamy Home Furnishings. All rights reserved.</p>
+            <p class="mt-2">Made with 💖 for a beautiful home.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
